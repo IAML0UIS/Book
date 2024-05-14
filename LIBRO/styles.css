@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
 body {
 	font-family: "Poppin", sans-serif;
 	background-color: #2e3537;
@@ -5,10 +8,14 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+
+	font-family: "Roboto", sans-serif;
+	background: linear-gradient(90deg, #fff 50%, #ab9680 50%);
+	font-size: 10px;
 }
 .book {
-	width: 350px;
-	height: 450px;
+	width: 400px;
+	height: 500px;
 	position: relative;
 	transition-duration: 1s;
 	perspective: 1500;
@@ -17,19 +24,20 @@ input {
 	display: none;
 }
 .cover, .back-cover {
-	background-color: #4173a5;
+	background-color: #5f4633;
 	width: 100%;
 	height: 100%;
 	border-radius: 0 15px 15px 0;
-	box-shadow: 0 0 5px rgb(41, 41, 41);
+	box-shadow: -1px 15px 10px 0px rgb(52, 43, 43);
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	transform-origin: center left;
+	
 }
 .cover {
 	position: absolute;
-	z-index: 4;
+	z-index: 10;
 	transition: transform 1s;
 }
 .cover label {
@@ -40,12 +48,13 @@ input {
 .back-cover {
 	position: relative;
 	z-index: -1;
+	
 }
 .page {
 	position: absolute;
-	background-color: white;
-	width: 330px;
-	height: 430px;
+	background-color: #f8e8c5;
+	width: 380px;
+	height: 480px;
 	border-radius: 0 15px 15px 0;
 	margin-top: 10px;
 	transform-origin: left;
@@ -65,6 +74,8 @@ input {
 	backface-visibility: hidden;
 	box-sizing: border-box;
 	padding: 1rem;
+
+	box-shadow: inset 7px 0px 20px 1px rgb(62, 54, 54);
 }
 .back-page {
 	transform: rotateY(180deg);
@@ -73,6 +84,8 @@ input {
 	height: 100%;
 	backface-visibility: hidden;
 	z-index: 99;
+	background-color: #f8e8c5;
+	box-shadow: inset 0px 0px 20px 1px rgb(62, 54, 54);
 }
 .next, .prev {
 	position: absolute;
@@ -86,12 +99,24 @@ input {
 	left: 1em;
 }
 #page1 {
-	z-index: 3;
+	z-index: 7;
 }
 #page2 {
-	z-index: 2;
+	z-index: 6;
 }
 #page3 {
+	z-index: 5;
+}
+#page4 {
+	z-index: 4;
+}
+#page5 {
+	z-index: 3;
+}
+#page6 {
+	z-index: 2;
+}
+#page7 {
 	z-index: 1;
 }
 #checkbox-cover:checked ~ .book {
@@ -112,4 +137,40 @@ input {
 #checkbox-page2:checked ~ .book #page2 {
 	transform: rotateY(-180deg);
 	z-index: 3;
+}
+#checkbox-page3:checked ~ .book #page3 {
+	transform: rotateY(-180deg);
+	z-index: 4;
+}
+#checkbox-page4:checked ~ .book #page4 {
+	transform: rotateY(-180deg);
+	z-index: 5;
+}
+#checkbox-page5:checked ~ .book #page5 {
+	transform: rotateY(-180deg);
+	z-index: 6;
+}
+#checkbox-page6:checked ~ .book #page6 {
+	transform: rotateY(-180deg);
+	z-index: 7;
+}
+#checkbox-page7:checked ~ .book #page6 {
+	transform: rotateY(-180deg);
+	z-index: 8;
+}
+#solucion{
+	width: 95%;
+	height: 80%;
+}
+#contexto{
+	margin-top: 50px;
+	margin-left: 30px;
+	width: 80%;
+	height: 80%;
+}
+#resumen{
+		margin-top: 50px;
+		margin-left: 30px;
+		width: 80%;
+		height: 80%;
 }
